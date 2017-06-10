@@ -4,32 +4,28 @@
 <head>
   <title>Tic Tac Toe</title>
   <link rel="stylesheet" href="tictactoe.css">
-  <script type="text/javascript" src="tictactoe.js"></script>
 </head>
 
 <body>
   <div class="container">
-    <h2>Tic Tac Toe</h2>
+    <h2 align="center"> Tic Tac Toe</h2>
     <div class="box">
-      <table class="ticTable">
+      <table class="ticTable" id="ticTable">
         <tbody>
           <tr>
-            <td id="0" onclick ="game_play(event)" class="borderBottom borderRight"></td>
-            <td id="1" onclick ="game_play(event)" class="borderBottom borderRight"></td>
-            <td id="2" onclick ="game_play(event)" class="borderBottom"></td>
-
+            <td id="0" onclick="game_play(event)" class="borderBottom borderRight"></td>
+            <td id="1" onclick="game_play(event)" class="borderBottom borderRight"></td>
+            <td id="2" onclick="game_play(event)" class="borderBottom"></td>
           </tr>
           <tr>
-            <td id="3" onclick ="game_play(event)" class="borderBottom borderRight"></td>
-            <td id="4" onclick ="game_play(event)" class="borderBottom borderRight"></td>
-            <td id="5" onclick ="game_play(event)" class="borderBottom"></td>
-
+            <td id="3" onclick="game_play(event)" class="borderBottom borderRight"></td>
+            <td id="4" onclick="game_play(event)" class="borderBottom borderRight"></td>
+            <td id="5" onclick="game_play(event)" class="borderBottom"></td>
           </tr>
           <tr>
-                        <td id="6" onclick ="game_play(event)" class="borderRight"></td>
-                        <td id="7" onclick ="game_play(event)" class="borderRight"></td>
-                        <td id="8" onclick ="game_play(event)" ></td>
-            
+            <td id="6" onclick ="game_play(event)" class="borderRight"></td>
+            <td id="7" onclick ="game_play(event)" class="borderRight"></td>
+            <td id="8" onclick ="game_play(event)"></td>
             <td></td>
           </tr>
         </tbody>
@@ -42,14 +38,15 @@
       <span class="markLabel">X</span>
       <span class="markLabel">O</span>
       <br/>
-      <div class="times">Won <span class="one_times">0</span> <span class="two_times">0</span> times</div>
-      <div class="times">Lost <span class="one_times">0</span> <span class="two_times">0</span> times</div>
+      <div class="times">Won <span id = "player1_win" class="one_times">0</span> <span id = "player3_win" class="two_times">0</span> times</div>
+      <div class="times">Lost <span id = "player2_win" class="one_times">0</span> <span id = "player4_win" class="two_times">0</span> times</div>
       <br/>
-      <div class="statusDiv borderBottom">Game Status</div>
-      <p>New Game</p>
+      <div class="statusDiv borderRight">Game Status</div>
+      <p id= "game_status_html" onclick = "game_play(event)" class="statusDiv borderRight borderBottom">New Game</p>
       <!-- Game Status Messages: Game in progress | Player 1 wins | Player 2 wins -->
-      <button>Restart</button>
+      <button onclick="reset_button(event)"> Restart </button>
     </div>
   </div>
+  <script type="text/javascript" src="tictactoe.js"></script>
 </body>
 </html>
